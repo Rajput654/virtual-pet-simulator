@@ -1,0 +1,104 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-image: url('https://wallpapercave.com/wp/wp13335166.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header, main, footer {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .text1, .text2, .text3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .text1 p, .text2 p {
+      font-size: 3rem;
+      color: #250c0c;
+      font-weight: bold;
+    }
+
+    .text1 img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .text3 p {
+      color: black(200, 23, 23);
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .img {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    
+
+    .foot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    .btn1, .btn2 {
+      padding: 12px 50px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn1 {
+      background-color: rgb(228, 161, 16);
+      color: white;
+    }
+
+    .btn1:hover {
+      background-color: #e39a00;
+    }
+
+    .btn2 {
+      background-color: rgb(77, 75, 75);
+      color: white;
+    }
+
+    .btn2:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .text1 p, .text2 p {
+        font-size: 2rem;
+      }
+      .text3 p {
+        font-size: 1rem;
+      }
+    }

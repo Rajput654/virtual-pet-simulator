@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Details About Pet</title>
+  <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+  <div class="main">
+    <div class="text">
+      <p>Let's get to <img src="Vector (3).png" alt=""> know your new friend!</p>
+    </div>
+    <input type="text" id="petName" placeholder="What's your pet's name?" required>
+    <input type="number" id="petAge" placeholder="How old is your pet?" required>
+    <input type="text" id="petGender" placeholder="What's your pet's gender?" required>
+    <a href="sighin.html"><button onclick="startJourney()">Let's start the journey!</button></a>
+  </div>
+
+  <script>
+    function startJourney() {
+      const name = document.getElementById('petName').value.trim();
+      const age = document.getElementById('petAge').value.trim();
+      const gender = document.getElementById('petGender').value.trim();
+
+      if (!name || !age || !gender) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      localStorage.setItem('petName', name);
+      localStorage.setItem('petAge', age);
+      localStorage.setItem('petGender', gender);
+
+      window.location.href = 'signup.html'; // redirect to sign-up page
+    }
+  </script>
+</body>
+</html>

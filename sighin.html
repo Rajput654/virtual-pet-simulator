@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auth - Virtual Pet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd89b, #19547b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .auth-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .auth-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .auth-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .auth-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #2c79e5;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .toggle {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .toggle a {
+      color: #2c79e5;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="auth-box">
+  <h2 id="formTitle">Sign In</h2>
+
+  <div id="emailField">
+    <input type="email" id="email" placeholder="Email" required>
+  </div>
+  <div id="passwordField">
+    <input type="password" id="password" placeholder="Password" required>
+  </div>
+
+  <div id="nameField" style="display: none;">
+    <input type="text" id="fullName" placeholder="Full Name">
+  </div>
+
+  <a href="index.html"><button onclick="handleSubmit()">Submit</button></a>
+
+  <div class="toggle">
+    <span id="toggleText">Don't have an account?</span>
+    <a onclick="toggleForm()" id="toggleLink">Sign Up</a>
+  </div>
+</div>
+
+<script>
+  let isSignUp = false;
+
+  function toggleForm() {
+    isSignUp = !isSignUp;
+
+    document.getElementById("formTitle").innerText = isSignUp ? "Sign Up" : "Sign In";
+    document.getElementById("nameField").style.display = isSignUp ? "block" : "none";
+    document.getElementById("toggleText").innerText = isSignUp ? "Already have an account?" : "Don't have an account?";
+    document.getElementById("toggleLink").innerText = isSignUp ? "Sign In" : "Sign Up";
+  }
+
+  function handleSubmit() {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const name = document.getElementById("fullName").value.trim();
+
+    if (!email || !password || (isSignUp && !name)) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    if (isSignUp) {
+      // Mock sign up flow
+      alert("Sign up successful!\nWelcome, " + name + "!");
+      // Redirect if needed
+    } else {
+      // Mock sign in flow
+      alert("Signed in as " + email + "!");
+      // Redirect if needed
+    }
+  }
+</script>
+
+</body>
+</html>

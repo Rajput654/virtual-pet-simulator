@@ -1,0 +1,52 @@
+body {
+      background-image: url('Dog-backgrounds-pictures-images.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .main {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    .text p {
+      font-size: 30px;
+      font-weight: bold;
+      color: #444;
+      margin: 5px 0;
+    }
+    .text img {
+      width: 30px;
+      vertical-align: middle;
+    }
+    input {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+      background: #2c79e5;
+      color: white;
+    }
+    ::placeholder {
+      color: white;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #4d4b4b;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }

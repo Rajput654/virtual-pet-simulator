@@ -1,0 +1,109 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: background 0.5s;
+}
+
+.day {
+  background-color: #f0f8ff;
+  color: #000;
+}
+
+.night {
+  background-color: #001f3f;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+select, input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+#pet-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pet-img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease, filter 0.5s ease;
+  animation: bounce 1s infinite;
+}
+
+.sad .pet-img,
+.sleeping .pet-img,
+.sick .pet-img {
+  animation: none;
+  filter: grayscale(100%);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#status {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#petNameDisplay,
+#ageLevelDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.stats {
+  margin-top: 15px;
+  font-size: 16px;
+  background: #fff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.night .stats {
+  background: #002b50;
+  color: #fff;
+}
+
+.bar {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.hunger { background-color: #ff6b6b; }
+.happiness { background-color: #4caf50; }
+.energy { background-color: #2196f3; }
+.health { background-color: #9c27b0; }

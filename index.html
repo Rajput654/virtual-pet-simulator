@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Pet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Virtual Pet</h1>
+
+  <label for="petType">Choose your pet:</label>
+ <select id="petType" onchange="changePet()">
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+</select>
+
+
+  <label for="petColor">Color:</label>
+  <select id="petColor" onchange="changeColor()">
+    <option value="none">Normal</option>
+    <option value="grayscale(100%)">Gray</option>
+    <option value="hue-rotate(90deg)">Green</option>
+    <option value="brightness(1.5)">Bright</option>
+  </select>
+
+  <input type="text" id="petNameInput" placeholder="Name your pet" />
+  <button onclick="setPetName()">Set Name</button>
+
+  <div id="petNameDisplay"></div>
+  <div id="ageLevelDisplay"></div>
+
+  <div id="pet-container">
+    <img id="petImage" class="pet-img" src="" alt="Pet" />
+  </div>
+
+  <div>
+    <button onclick="feedPet()">🍎 Feed</button>
+    <button onclick="playWithPet()">🎾 Play</button>
+  </div>
+
+  <div class="stats">
+    <div>Hunger:</div>
+    <div class="bar"><div id="hungerBar" class="fill hunger"></div></div>
+    <div>Happiness:</div>
+    <div class="bar"><div id="happinessBar" class="fill happiness"></div></div>
+    <div>Energy:</div>
+    <div class="bar"><div id="energyBar" class="fill energy"></div></div>
+    <div>Health:</div>
+    <div class="bar"><div id="healthBar" class="fill health"></div></div>
+  </div>
+
+  <div id="status">😊 Your pet is happy!</div>
+
+  <audio id="feedSound" src="https://cdn.jsdelivr.net/gh/mixkit-artists/sounds@main/mixkit-chewing-something-crispy-2243.wav"></audio>
+  <audio id="playSound" src="https://cdn.jsdelivr.net/gh/mixkit-artists/sounds@main/mixkit-toy-squeak-2588.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
